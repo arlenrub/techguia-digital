@@ -4,7 +4,7 @@ const metrics = [
   { value: '100K+', label: 'Leads Gerados', detail: 'em campanhas ativas' },
   { value: '20+', label: 'Clientes Ativos', detail: 'em diversas áreas' },
   { value: '4×', label: 'Crescimento Médio', detail: 'em 90 dias' },
-  { value: '2', label: 'Anos de Experiência', detail: 'entregando resultados' },
+  { value: '5', label: 'Anos de Experiência', detail: 'entregando resultados' },
 ]
 
 export default function Results() {
@@ -30,7 +30,7 @@ export default function Results() {
             className="text-body-md"
             style={{ color: 'var(--text-muted)', marginTop: 12, maxWidth: 480, margin: '12px auto 0' }}
           >
-            Dados reais dos nossos clientes nos últimos 2 anos de operação.
+            Dados reais dos nossos clientes nos últimos 5 anos de operação.
           </p>
         </div>
 
