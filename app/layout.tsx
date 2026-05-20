@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Bebas_Neue, League_Spartan, Inter } from 'next/font/google'
 import Script from 'next/script'
+import SmoothScroll from '@/components/providers/SmoothScroll'
 import './globals.css'
 
 /* ─────────────────────────────────────────────
@@ -68,7 +69,9 @@ export default function RootLayout({
       className={`${bebasNeue.variable} ${leagueSpartan.variable} ${inter.variable}`}
     >
       <body>
-        {children}
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
 
         {/* ── Google Analytics 4 ── */}
         {GA_ID && (

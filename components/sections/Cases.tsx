@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { BarChart3 } from 'lucide-react'
+import AnimateIn from '@/components/ui/AnimateIn'
 
 const cases = [
   {
@@ -148,33 +149,37 @@ export default function Cases() {
       <div className="container-brand">
 
         {/* ── Header ── */}
-        <div style={{ marginBottom: 36 }}>
-          <span className="badge-brand" style={{ marginBottom: 14, display: 'inline-flex', gap: 8 }}>
-            <span style={{ width: 6, height: 6, borderRadius: 9999, background: 'var(--accent)', display: 'inline-block' }} />
-            Cases de Sucesso
-          </span>
-          <h2 className="text-display-md" style={{ color: '#FFF', textTransform: 'uppercase' }}>
-            Clientes que <span style={{ color: 'var(--accent)' }}>Cresceram</span>
-          </h2>
-          <p className="text-body-md" style={{ color: 'var(--text-muted)', marginTop: 10, maxWidth: 500 }}>
-            Resultados reais de quem apostou em tecnologia para escalar o negócio.
-          </p>
-        </div>
+        <AnimateIn>
+          <div style={{ marginBottom: 36 }}>
+            <span className="badge-brand" style={{ marginBottom: 14, display: 'inline-flex', gap: 8 }}>
+              <span style={{ width: 6, height: 6, borderRadius: 9999, background: 'var(--accent)', display: 'inline-block' }} />
+              Cases de Sucesso
+            </span>
+            <h2 className="text-display-md" style={{ color: '#FFF', textTransform: 'uppercase' }}>
+              Clientes que <span style={{ color: 'var(--accent)' }}>Cresceram</span>
+            </h2>
+            <p className="text-body-md" style={{ color: 'var(--text-muted)', marginTop: 10, maxWidth: 500 }}>
+              Resultados reais de quem apostou em tecnologia para escalar o negócio.
+            </p>
+          </div>
+        </AnimateIn>
 
         {/* ── Cards grid ── */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr',
-            gap: 16,
-            alignItems: 'stretch',
-          }}
-          className="cases-grid"
-        >
-          {visible.map((c) => (
-            <CaseCard key={c.id} c={c} />
-          ))}
-        </div>
+        <AnimateIn delay={0.15}>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr',
+              gap: 16,
+              alignItems: 'stretch',
+            }}
+            className="cases-grid"
+          >
+            {visible.map((c) => (
+              <CaseCard key={c.id} c={c} />
+            ))}
+          </div>
+        </AnimateIn>
 
         {/* ── Controls (Only on Desktop) ── */}
         {!isMobile && (

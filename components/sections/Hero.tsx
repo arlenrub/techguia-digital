@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import AnimateIn from '@/components/ui/AnimateIn'
 
 export default function Hero() {
   return (
@@ -15,62 +16,72 @@ export default function Hero() {
         <div className="hero-grid">
           {/* ── LEFT — copy ── */}
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <span
-              className="badge-brand"
-              style={{ marginBottom: 20, display: 'inline-flex', gap: 8, alignSelf: 'flex-start' }}
-            >
+            <AnimateIn delay={0}>
               <span
-                style={{
-                  width: 6, height: 6, borderRadius: 9999,
-                  background: 'var(--accent)', display: 'inline-block', flexShrink: 0,
-                }}
-              />
-              Agência de Resultado — não de Promessa
-            </span>
+                className="badge-brand"
+                style={{ marginBottom: 20, display: 'inline-flex', gap: 8, alignSelf: 'flex-start' }}
+              >
+                <span
+                  style={{
+                    width: 6, height: 6, borderRadius: 9999,
+                    background: 'var(--accent)', display: 'inline-block', flexShrink: 0,
+                  }}
+                />
+                Agência de Resultado — não de Promessa
+              </span>
+            </AnimateIn>
 
-            <h1
-              className="text-display-xl"
-              style={{ color: '#FFFFFF', marginBottom: 16 }}
-            >
-              Seu negócio{' '}
-              <span style={{ color: 'var(--accent)' }}>crescendo</span>
-              {' '}no automático
-            </h1>
+            <AnimateIn delay={0.1}>
+              <h1
+                className="text-display-xl"
+                style={{ color: '#FFFFFF', marginBottom: 16 }}
+              >
+                Seu negócio{' '}
+                <span style={{ color: 'var(--accent)' }}>crescendo</span>
+                {' '}no automático
+              </h1>
+            </AnimateIn>
 
-            <p
-              className="text-body-md"
-              style={{ color: 'var(--text-muted)', maxWidth: 500, marginBottom: 32 }}
-            >
-              Enquanto você foca no seu negócio, a gente gera leads, automatiza seu
-              atendimento e constrói os sistemas que fazem você vender mais — todo
-              dia, sem depender de indicação.
-            </p>
+            <AnimateIn delay={0.2}>
+              <p
+                className="text-body-md"
+                style={{ color: 'var(--text-muted)', maxWidth: 500, marginBottom: 32 }}
+              >
+                Enquanto você foca no seu negócio, a gente gera leads, automatiza seu
+                atendimento e constrói os sistemas que fazem você vender mais — todo
+                dia, sem depender de indicação.
+              </p>
+            </AnimateIn>
 
-            <div className="hero-buttons">
-              <a href="#contato" className="btn-primary">
-                Quero escalar meu negócio →
-              </a>
-              <a href="#servicos" className="btn-ghost">
-                Ver como funciona
-              </a>
-            </div>
+            <AnimateIn delay={0.3}>
+              <div className="hero-buttons">
+                <a href="#contato" className="btn-primary">
+                  Quero escalar meu negócio →
+                </a>
+                <a href="#servicos" className="btn-ghost">
+                  Ver como funciona
+                </a>
+              </div>
+            </AnimateIn>
           </div>
 
           {/* ── RIGHT — hero image ── */}
           <div className="hero-image-wrap">
-            <Image
-              src="/images/cards_hero_nobg.png"
-              alt="Serviços TechGuia Digital — Automação com IA, Tráfego Pago, Micro SaaS, Design & Branding"
-              width={800}
-              height={434}
-              priority
-              style={{
-                width: '100%',
-                height: 'auto',
-                objectFit: 'contain',
-                filter: 'drop-shadow(0 20px 48px rgba(255,140,0,0.3))',
-              }}
-            />
+            <AnimateIn delay={0.2} direction="left">
+              <Image
+                src="/images/cards_hero_nobg.png"
+                alt="Serviços TechGuia Digital — Automação com IA, Tráfego Pago, Micro SaaS, Design & Branding"
+                width={800}
+                height={434}
+                priority
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  filter: 'drop-shadow(0 20px 48px rgba(255,140,0,0.3))',
+                }}
+              />
+            </AnimateIn>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 // Server Component — sem 'use client'
 // Accordion usa <details>/<summary> nativo do HTML (zero JS)
+import AnimateIn from '@/components/ui/AnimateIn'
 
 const faqs = [
   {
@@ -37,6 +38,7 @@ export default function FAQ() {
     >
       <div className="container-brand">
         {/* ── Header ── */}
+        <AnimateIn>
         <div style={{ textAlign: 'center', marginBottom: 56 }}>
           <span
             className="badge-brand"
@@ -79,6 +81,7 @@ export default function FAQ() {
             trabalhar com a gente.
           </p>
         </div>
+        </AnimateIn>
 
         {/* ── Accordion ── */}
         <div

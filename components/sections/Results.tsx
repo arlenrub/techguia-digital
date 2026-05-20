@@ -1,4 +1,5 @@
 import { BarChart3 } from 'lucide-react'
+import AnimateIn from '@/components/ui/AnimateIn'
 
 const metrics = [
   { value: '100K+', label: 'Leads Gerados', detail: 'em campanhas ativas' },
@@ -17,22 +18,24 @@ export default function Results() {
       <div className="container-brand">
 
         {/* ── Header ── */}
-        <div style={{ textAlign: 'center', marginBottom: 56 }}>
-          <span className="badge-brand" style={{ marginBottom: 16, display: 'inline-flex', gap: 8 }}>
-            <BarChart3 size={14} color="var(--accent)" strokeWidth={1.5} />
-            Resultados Reais
-          </span>
-          <h2 className="text-display-md" style={{ color: '#FFFFFF', marginTop: 12 }}>
-            Números que{' '}
-            <span style={{ color: 'var(--accent)' }}>provam</span>
-          </h2>
-          <p
-            className="text-body-md"
-            style={{ color: 'var(--text-muted)', marginTop: 12, maxWidth: 480, margin: '12px auto 0' }}
-          >
-            Dados reais dos nossos clientes nos últimos 5 anos de operação.
-          </p>
-        </div>
+        <AnimateIn>
+          <div style={{ textAlign: 'center', marginBottom: 56 }}>
+            <span className="badge-brand" style={{ marginBottom: 16, display: 'inline-flex', gap: 8 }}>
+              <BarChart3 size={14} color="var(--accent)" strokeWidth={1.5} />
+              Resultados Reais
+            </span>
+            <h2 className="text-display-md" style={{ color: '#FFFFFF', marginTop: 12 }}>
+              Números que{' '}
+              <span style={{ color: 'var(--accent)' }}>provam</span>
+            </h2>
+            <p
+              className="text-body-md"
+              style={{ color: 'var(--text-muted)', marginTop: 12, maxWidth: 480, margin: '12px auto 0' }}
+            >
+              Dados reais dos nossos clientes nos últimos 5 anos de operação.
+            </p>
+          </div>
+        </AnimateIn>
 
         {/* ── Metric cards ── */}
         <div
@@ -70,45 +73,47 @@ export default function Results() {
                 />
               )}
 
-              {/* Number */}
-              <p
-                style={{
-                  fontFamily: 'var(--font-bebas-neue), sans-serif',
-                  fontSize: 'clamp(64px, 8vw, 96px)',
-                  lineHeight: 1,
-                  color: 'var(--accent)',
-                  letterSpacing: '-1px',
-                }}
-              >
-                {m.value}
-              </p>
+              <AnimateIn delay={0.1 * i} direction="up">
+                {/* Number */}
+                <p
+                  style={{
+                    fontFamily: 'var(--font-bebas-neue), sans-serif',
+                    fontSize: 'clamp(64px, 8vw, 96px)',
+                    lineHeight: 1,
+                    color: 'var(--accent)',
+                    letterSpacing: '-1px',
+                  }}
+                >
+                  {m.value}
+                </p>
 
-              {/* Label */}
-              <p
-                style={{
-                  fontFamily: 'var(--font-league-spartan), sans-serif',
-                  fontSize: 16,
-                  fontWeight: 700,
-                  color: '#FFFFFF',
-                  marginTop: 8,
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                }}
-              >
-                {m.label}
-              </p>
+                {/* Label */}
+                <p
+                  style={{
+                    fontFamily: 'var(--font-league-spartan), sans-serif',
+                    fontSize: 16,
+                    fontWeight: 700,
+                    color: '#FFFFFF',
+                    marginTop: 8,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                  }}
+                >
+                  {m.label}
+                </p>
 
-              {/* Detail */}
-              <p
-                style={{
-                  fontFamily: 'var(--font-inter), sans-serif',
-                  fontSize: 13,
-                  color: 'var(--text-muted)',
-                  marginTop: 6,
-                }}
-              >
-                {m.detail}
-              </p>
+                {/* Detail */}
+                <p
+                  style={{
+                    fontFamily: 'var(--font-inter), sans-serif',
+                    fontSize: 13,
+                    color: 'var(--text-muted)',
+                    marginTop: 6,
+                  }}
+                >
+                  {m.detail}
+                </p>
+              </AnimateIn>
             </div>
           ))}
         </div>

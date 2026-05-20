@@ -1,5 +1,6 @@
 import { LayoutGrid, ArrowUpRight, FolderGit2, Shield, Calendar, Sparkles } from 'lucide-react'
 import Link from 'next/link'
+import AnimateIn from '@/components/ui/AnimateIn'
 
 const projects = [
   {
@@ -40,18 +41,20 @@ export default function Portfolio() {
     >
       <div className="container-brand">
         {/* ── Header ── */}
-        <div style={{ marginBottom: 48, maxWidth: 640 }}>
-          <span className="badge-brand" style={{ marginBottom: 16, display: 'inline-flex', gap: 8 }}>
-            <LayoutGrid size={14} color="var(--accent)" strokeWidth={1.5} />
-            Nosso Portfólio
-          </span>
-          <h2 className="text-display-md" style={{ color: '#FFFFFF', marginTop: 12 }}>
-            Projetos de <span style={{ color: 'var(--accent)' }}>Micro SaaS</span>
-          </h2>
-          <p className="text-body-md" style={{ color: 'var(--text-muted)', marginTop: 12 }}>
-            Soluções completas e prontas que geram receita e otimizam processos.
-          </p>
-        </div>
+        <AnimateIn>
+          <div style={{ marginBottom: 48, maxWidth: 640 }}>
+            <span className="badge-brand" style={{ marginBottom: 16, display: 'inline-flex', gap: 8 }}>
+              <LayoutGrid size={14} color="var(--accent)" strokeWidth={1.5} />
+              Nosso Portfólio
+            </span>
+            <h2 className="text-display-md" style={{ color: '#FFFFFF', marginTop: 12 }}>
+              Projetos de <span style={{ color: 'var(--accent)' }}>Micro SaaS</span>
+            </h2>
+            <p className="text-body-md" style={{ color: 'var(--text-muted)', marginTop: 12 }}>
+              Soluções completas e prontas que geram receita e otimizam processos.
+            </p>
+          </div>
+        </AnimateIn>
 
         {/* ── Grid ── */}
         <div
@@ -61,26 +64,26 @@ export default function Portfolio() {
             gap: 24,
           }}
         >
-          {projects.map((p) => {
+          {projects.map((p, index) => {
             const hasUrl = !!p.url
             return (
-              <div
-                key={p.name}
-                className="card-brand"
-                style={{
-                  padding: 28,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between',
-                  minHeight: 320,
-                  height: '100%',
-                  background: 'var(--bg-surface)',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: 'var(--radius-xl)',
-                  transition: 'border-color 0.2s',
-                  position: 'relative'
-                }}
-              >
+              <AnimateIn key={p.name} delay={0.1 * index}>
+                <div
+                  className="card-brand"
+                  style={{
+                    padding: 28,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    minHeight: 320,
+                    height: '100%',
+                    background: 'var(--bg-surface)',
+                    border: '1px solid var(--border-subtle)',
+                    borderRadius: 'var(--radius-xl)',
+                    transition: 'border-color 0.2s',
+                    position: 'relative'
+                  }}
+                >
                 <div>
                   {/* Top Badges */}
                   <div
@@ -216,6 +219,7 @@ export default function Portfolio() {
                   )}
                 </div>
               </div>
+             </AnimateIn>
             )
           })}
         </div>
