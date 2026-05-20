@@ -2,6 +2,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
 import Services from '@/components/sections/Services'
+import Portfolio from '@/components/sections/Portfolio'
 import Results from '@/components/sections/Results'
 import Cases from '@/components/sections/Cases'
 import FAQ from '@/components/sections/FAQ'
@@ -78,6 +79,9 @@ export default function HomePage() {
 
         {/* 3. Serviços */}
         <Services />
+
+        {/* 3.5. Portfólio */}
+        <Portfolio />
 
         {/* 4. Resultados */}
         <Results />

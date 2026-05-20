@@ -13,6 +13,8 @@ export default function CTA() {
         overflow: 'hidden',
       }}
     >
+      {/* Scroll anchor for #cta */}
+      <div id="cta" style={{ position: 'absolute', top: 0, left: 0 }} />
       {/* Decorative glow */}
       <div
         style={{
