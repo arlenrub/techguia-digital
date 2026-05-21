@@ -34,11 +34,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Techguia Digital | Tráfego Pago, Automação com IA e Micro SaaS em Recife',
   description: 'Agência em Recife especializada em tráfego pago, automação com IA, design e criação de micro SaaS. Mais de 100 negócios atendidos. Consultoria gratuita.',
-  metadataBase: new URL('https://techguiadigital.com'),
+  metadataBase: new URL('https://www.techguiadigital.com'),
   openGraph: {
     title: 'Techguia Digital | Tráfego Pago e Automação com IA',
     description: 'Escale seu negócio com tráfego pago, automação com IA e sistemas personalizados. Consultoria gratuita.',
-    url: 'https://techguiadigital.com',
+    url: 'https://www.techguiadigital.com',
     siteName: 'Techguia Digital',
     locale: 'pt_BR',
     type: 'website',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     description: 'Tráfego pago, automação com IA e Micro SaaS em Recife.',
   },
   alternates: {
-    canonical: 'https://techguiadigital.com',
+    canonical: 'https://www.techguiadigital.com',
   },
   robots: {
     index: true,
