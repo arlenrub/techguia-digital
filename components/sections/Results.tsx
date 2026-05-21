@@ -1,11 +1,12 @@
 import { BarChart3 } from 'lucide-react'
 import AnimateIn from '@/components/ui/AnimateIn'
+import CountUp from '@/components/ui/CountUp'
 
 const metrics = [
-  { value: '100K+', label: 'Leads Gerados', detail: 'em campanhas ativas' },
-  { value: '20+', label: 'Clientes Ativos', detail: 'em diversas áreas' },
-  { value: '4×', label: 'Crescimento Médio', detail: 'em 90 dias' },
-  { value: '5', label: 'Anos de Experiência', detail: 'entregando resultados' },
+  { value: <CountUp end={100} suffix="K+" duration={2} />, label: 'Leads Gerados', detail: 'em campanhas ativas' },
+  { value: <CountUp end={20} suffix="+" duration={1.8} />, label: 'Clientes Ativos', detail: 'em diversas áreas' },
+  { value: <CountUp end={4} suffix="×" duration={1.5} />, label: 'Crescimento Médio', detail: 'em 90 dias' },
+  { value: <CountUp end={5} duration={1.5} />, label: 'Anos de Experiência', detail: 'entregando resultados' },
 ]
 
 export default function Results() {
