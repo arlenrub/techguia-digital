@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { BarChart3 } from 'lucide-react'
-import AnimateIn from '@/components/ui/AnimateIn'
+import AnimateIn from '@/components/ui/AnimateInLazy'
 
 const cases = [
   {

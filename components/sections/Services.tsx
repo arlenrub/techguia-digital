@@ -1,5 +1,5 @@
 import { Bot, TrendingUp, Palette, Smartphone, CheckCircle2, Clock, Zap, ArrowRight } from 'lucide-react'
-import AnimateIn from '@/components/ui/AnimateIn'
+import AnimateIn from '@/components/ui/AnimateInLazy'
 
 const featured = {
   title: 'Automação com IA',

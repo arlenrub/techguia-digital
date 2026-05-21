@@ -29,6 +29,7 @@ export default function CountUp({
 
     const startTime = performance.now()
     const endTime = startTime + duration * 1000
+    let rAFId: number
 
     function easeOutExpo(t: number): number {
       return t === 1 ? 1 : 1 - Math.pow(2, -10 * t)
@@ -44,14 +45,20 @@ export default function CountUp({
       setCount(parseFloat(current.toFixed(decimals)))
 
       if (progress < 1) {
-        requestAnimationFrame(update)
+        rAFId = requestAnimationFrame(update)
       } else {
         setCount(end)
         setFinished(true)
       }
     }
 
-    requestAnimationFrame(update)
+    rAFId = requestAnimationFrame(update)
+
+    return () => {
+      if (rAFId) {
+        cancelAnimationFrame(rAFId)
+      }
+    }
   }, [inView, end, duration, decimals])
 
   return (

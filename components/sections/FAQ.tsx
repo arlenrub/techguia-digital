@@ -1,6 +1,6 @@
 // Server Component — sem 'use client'
 // Accordion usa <details>/<summary> nativo do HTML (zero JS)
-import AnimateIn from '@/components/ui/AnimateIn'
+import AnimateIn from '@/components/ui/AnimateInLazy'
 
 const faqs = [
   {

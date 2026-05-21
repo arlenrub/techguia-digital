@@ -1,6 +1,6 @@
 import { LayoutGrid, ArrowUpRight, FolderGit2, Shield, Calendar, Sparkles } from 'lucide-react'
 import Link from 'next/link'
-import AnimateIn from '@/components/ui/AnimateIn'
+import AnimateIn from '@/components/ui/AnimateInLazy'
 
 const projects = [
   {

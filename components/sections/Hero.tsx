@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import AnimateIn from '@/components/ui/AnimateIn'
+import AnimateIn from '@/components/ui/AnimateInLazy'
 
 export default function Hero() {
   return (
@@ -73,7 +73,9 @@ export default function Hero() {
                 alt="Serviços TechGuia Digital — Automação com IA, Tráfego Pago, Micro SaaS, Design & Branding"
                 width={800}
                 height={434}
-                priority
+                priority={true}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={85}
                 style={{
                   width: '100%',
                   height: 'auto',

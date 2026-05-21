@@ -1,5 +1,5 @@
 import { BarChart3 } from 'lucide-react'
-import AnimateIn from '@/components/ui/AnimateIn'
+import AnimateIn from '@/components/ui/AnimateInLazy'
 import CountUp from '@/components/ui/CountUp'
 
 const metrics = [
