@@ -3,10 +3,10 @@ import AnimateIn from '@/components/ui/AnimateIn'
 import CountUp from '@/components/ui/CountUp'
 
 const metrics = [
-  { value: <CountUp end={100} suffix="K+" duration={2} />, label: 'Leads Gerados', detail: 'em campanhas ativas' },
+  { value: <CountUp end={100} suffix="K+" duration={2} />, label: 'Leads Gerados', detail: 'em campanhas desde 2022' },
   { value: <CountUp end={20} suffix="+" duration={1.8} />, label: 'Clientes Ativos', detail: 'em diversas áreas' },
-  { value: <CountUp end={4} suffix="×" duration={1.5} />, label: 'Crescimento Médio', detail: 'em 90 dias' },
-  { value: <CountUp end={5} duration={1.5} />, label: 'Anos de Experiência', detail: 'entregando resultados' },
+  { value: <CountUp end={4} suffix="×" duration={1.5} />, label: 'Crescimento Médio', detail: 'de crescimento médio em 90 dias' },
+  { value: <CountUp end={5} duration={1.5} />, label: 'Anos de Experiência', detail: 'anos entregando resultados' },
 ]
 
 export default function Results() {

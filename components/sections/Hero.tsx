@@ -27,7 +27,7 @@ export default function Hero() {
                     background: 'var(--accent)', display: 'inline-block', flexShrink: 0,
                   }}
                 />
-                Agência de Resultado — não de Promessa
+                Mais de 100 negócios atendidos desde 2022
               </span>
             </AnimateIn>
 

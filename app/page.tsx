@@ -2,6 +2,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
 import Services from '@/components/sections/Services'
+import MidCTA from '@/components/sections/MidCTA'
 import Portfolio from '@/components/sections/Portfolio'
 import Results from '@/components/sections/Results'
 import Cases from '@/components/sections/Cases'
@@ -79,6 +80,9 @@ export default function HomePage() {
 
         {/* 3. Serviços */}
         <Services />
+
+        {/* Mid CTA intermediário */}
+        <MidCTA />
 
         {/* 3.5. Portfólio */}
         <Portfolio />

@@ -10,7 +10,7 @@ const cases = [
     service: 'Tráfego Pago',
     result: '4x mais vendas em 3 meses',
     quote:
-      'Antes mal conseguia 2 clientes por semana. Hoje recebo mais de 15 leads qualificados por dia graças ao tráfego pago que a TechGuia configurou pra mim.',
+      'Saí de 2 clientes por semana para 15 leads qualificados por dia. Em 3 meses, quadrupliquei o faturamento.',
     author: 'Pedro Alves',
     role: 'Empreendedor Autônomo',
     initials: 'PA',

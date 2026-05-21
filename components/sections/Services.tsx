@@ -1,4 +1,4 @@
-import { Bot, TrendingUp, Palette, Smartphone, CheckCircle2, Clock, Zap } from 'lucide-react'
+import { Bot, TrendingUp, Palette, Smartphone, CheckCircle2, Clock, Zap, ArrowRight } from 'lucide-react'
 import AnimateIn from '@/components/ui/AnimateIn'
 
 const featured = {
@@ -20,6 +20,7 @@ const others = [
     title: 'Tráfego Pago',
     description:
       'Campanhas de Google Ads e Meta Ads otimizadas com dados reais para gerar leads qualificados e vendas consistentes.',
+    whatsappText: 'Olá,%20tenho%20interesse%20em%20Tráfego%20Pago',
   },
   {
     id: 'design',
@@ -27,6 +28,7 @@ const others = [
     title: 'Design & Branding',
     description:
       'Identidade visual profissional, landing pages de alta conversão e materiais que posicionam sua marca acima da concorrência.',
+    whatsappText: 'Olá,%20tenho%20interesse%20em%20Design%20e%20Branding',
   },
   {
     id: 'saas',
@@ -35,6 +37,7 @@ const others = [
     description:
       'Apps personalizados para automatizar processos internos, fidelizar clientes e criar novas fontes de receita recorrente.',
     badge: 'NOVO',
+    whatsappText: 'Olá,%20tenho%20interesse%20em%20Micro%20SaaS',
   },
 ]
 
@@ -124,6 +127,13 @@ export default function Services() {
               <p className="text-body-lg" style={{ color: 'var(--text-muted)', maxWidth: 480 }}>
                 {featured.description}
               </p>
+              <a
+                href="https://wa.me/5581992665890?text=Olá,%20tenho%20interesse%20em%20Automação%20com%20IA"
+                target="_blank"
+                className="inline-flex items-center gap-1 text-brand-orange text-sm font-semibold mt-4 hover:opacity-80 transition-opacity"
+              >
+                Quero esse serviço <ArrowRight size={14} />
+              </a>
             </div>
 
             {/* Right side — highlights */}
@@ -206,6 +216,13 @@ export default function Services() {
                 <p className="text-body-sm" style={{ color: 'var(--text-muted)' }}>
                   {s.description}
                 </p>
+                <a
+                  href={`https://wa.me/5581992665890?text=${s.whatsappText}`}
+                  target="_blank"
+                  className="inline-flex items-center gap-1 text-brand-orange text-sm font-semibold mt-4 hover:opacity-80 transition-opacity"
+                >
+                  Quero esse serviço <ArrowRight size={14} />
+                </a>
               </div>
             </AnimateIn>
           ))}
